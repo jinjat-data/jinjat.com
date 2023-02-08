@@ -34,7 +34,7 @@ function Home() {
                 <div>
                   <Card
                     title="What is jinjat?"
-                    body="dbt enables data practitioners to adopt software engineering best practices and deploy modular, reliable analytics code."
+                    body="Jinjat lets you develop REST applications from your dbt analysis and user interfaces from your OpenAPI definitions. ❯"
                     link="/docs/introduction"
                     icon="question-mark"
                   />
@@ -42,7 +42,7 @@ function Home() {
                 <div>
                   <Card
                     title="Getting started guide"
-                    body="Learn how to set up dbt and build your first models. You will also test and document your project, and schedule a job."
+                    body="Learn how to set up Jinjat and build your first app. Jinjat requires you to know dbt in advance. ❯"
                     link="/docs/get-started/getting-started/overview"
                     icon="book"
                   />
@@ -50,7 +50,7 @@ function Home() {
                 <div>
                   <Card
                     title="Docs"
-                    body="Discover everything dbt has to offer from the basics to advanced concepts."
+                    body="Discover everything Jinjat has to offer from the basics to advanced concepts. ❯"
                     link="/docs/build/projects"
                     icon="docs"
                   />
@@ -58,7 +58,7 @@ function Home() {
                 <div>
                   <Card
                     title="Integrations"
-                    body="dbt connects to most major databases, data warehouses, data lakes, or query engines."
+                    body="Jinjat supports all the databases dbt supports out of the box and also integrates  ❯"
                     link="/docs/supported-data-platforms"
                     icon="rocket"
                   />
@@ -78,22 +78,22 @@ function Home() {
                 <Card
                   title="CRUD applications"
                   body="Generate REST APIs and UIs automatically for dbt sources"
-                  link="/community/join"
-                  icon="smiley-face"
-                />
-              </div>
-              <div>
-                <Card
-                  title="Metric store"
-                  body="Create a SQL under your [analysis]() directory and reference `request()` macro"
-                  link="/community/contribute"
+                  link="/jinjat-cli/generate#crud"
                   icon="pencil-paper"
                 />
               </div>
               <div>
                 <Card
+                  title="Metric store"
+                  body="Create Business Intelligence apps using dbt-metrics with your custom front-end"
+                  link="/jinjat-cli/generate#metrics"
+                  icon="book"
+                />
+              </div>
+              <div>
+                <Card
                   title="Cloud-native Backend APIs"
-                  body="Use your custom UDF, procedures natively in SQL to interact with your cloud"
+                  body="Use your custom UDF, procedures natively in SQL to interact with your cloud data-warehouse"
                   link="https://hub.getdbt.com/"
                   icon="packages"
                 />

@@ -64,9 +64,14 @@ INFO:    Uvicorn running on http://127.0.0.1:8581`
     {
         name: `⒍ Expose UI <i>(optional)</i>`,
         file: '~zsh',
-        code: `% jinjat serve ui 
-INFO     Registering \`example_endpoint\` route
-INFO:    Uvicorn running on http://127.0.0.1:8581`
+        lang: 'markdown',
+        code: `% npm create refine-app@latest my-project
+ ? Select your project type: 
+ ❯ refine-jinjat
+
+ ? Auth Provider:
+ ❯ None
+% npm run dev`
     }
 ]
 

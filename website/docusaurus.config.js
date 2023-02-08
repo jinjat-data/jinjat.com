@@ -80,7 +80,7 @@ var siteSettings = {
         });
         return theme;
       })(),
-      additionalLanguages: ["bash"],
+      additionalLanguages: ["bash", "markdown"],
     },
     navbar: {
       hideOnScroll: true,
@@ -141,7 +141,7 @@ var siteSettings = {
             <a href='https://jinjat.com/cloud/terms/'>Terms of Service</a>
             <a href='https://jinjat.com/cloud/privacy-policy/'>Privacy Policy</a>
             <a href='https://jinjat.com/security/'>Security</a>
-            <button id=\"ot-sdk-btn\" onclick="openPreferenceCenter()">Cookie Settings</button>
+<!--            <button id=\"ot-sdk-btn\" onclick="openPreferenceCenter()">Cookie Settings</button>-->
           </div>
 
           <div class='footer__items--right'>
