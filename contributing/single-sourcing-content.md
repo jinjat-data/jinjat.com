@@ -9,7 +9,7 @@
 
 ## About versioning
 
-Versions are managed in the `versions` array located in the `website/dbt-versions.js` file. This array holds all versions which are selectable from the versions dropdown in the navigation.
+Versions are managed in the `versions` array located in the `website/jinjat-versions.js` file. This array holds all versions which are selectable from the versions dropdown in the navigation.
 
 **The first version in the array is the latest version.** This is the default version when a visitor loads the page.
 
@@ -47,7 +47,7 @@ The content for these two EOLDate banners are located in the `website/src/theme/
 
 ### Versioning entire pages
 
-If a Docs page should not be available for the selected version, it is possible to version the entire page. This is managed in the `versionedPages` array within the `website/dbt-versions.js` file.
+If a Docs page should not be available for the selected version, it is possible to version the entire page. This is managed in the `versionedPages` array within the `website/jinjat-versions.js` file.
 
 Two things occur when a page is not available for the selected version:
 
@@ -55,7 +55,7 @@ Two things occur when a page is not available for the selected version:
 - The page is removed from the sidebar
 
 
-Example of how to version a page in the `dbt-versions.js` file:
+Example of how to version a page in the `jinjat-versions.js` file:
 
 ```jsx
 exports.versionedPages = [

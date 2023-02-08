@@ -72,12 +72,12 @@ function Home() {
           </section>
 
           <section className="from-the-community">
-            <h2>Use-cases</h2>
+            <h2>Applications</h2>
             <div className="grid--3-col">
               <div>
                 <Card
                   title="CRUD applications"
-                  body="Create bo"
+                  body="Generate REST APIs and UIs automatically for dbt sources"
                   link="/community/join"
                   icon="smiley-face"
                 />
@@ -93,7 +93,7 @@ function Home() {
               <div>
                 <Card
                   title="Cloud-native Backend APIs"
-                  body="Take your dbt project to the next level with community built packages."
+                  body="Use your custom UDF, procedures natively in SQL to interact with your cloud"
                   link="https://hub.getdbt.com/"
                   icon="packages"
                 />

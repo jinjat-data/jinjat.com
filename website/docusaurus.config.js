@@ -1,13 +1,13 @@
 const path = require("path");
 const math = require("remark-math");
 const katex = require("rehype-katex");
-const { versions, versionedPages } = require("./dbt-versions");
+const { versions, versionedPages } = require("./jinjat-versions");
 require("dotenv").config();
 
 /* Debugging */
 var SITE_URL;
 if (!process.env.CONTEXT || process.env.CONTEXT == "production") {
-  SITE_URL = "https://docs.getdbt.com";
+  SITE_URL = "https://jinjat.com";
 } else {
   SITE_URL = process.env.DEPLOY_URL;
 }
@@ -41,8 +41,8 @@ console.log("DEBUG: metatags = ", metatags);
 
 var siteSettings = {
   baseUrl: "/",
-  tagline: "End user documentation, guides and technical reference for dbt",
-  title: "dbt Developer Hub",
+  tagline: "End user documentation, guides and technical reference for Jinjat",
+  title: "Jinjat - Data app framework",
   url: SITE_URL,
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "throw",
@@ -57,9 +57,9 @@ var siteSettings = {
     // Adding non-empty strings for Algolia config
     // allows Docusaurus to run locally without .env file
     algolia: {
-      apiKey: ALGOLIA_API_KEY ? ALGOLIA_API_KEY : "dbt",
-      indexName: ALGOLIA_INDEX_NAME ? ALGOLIA_INDEX_NAME : "dbt",
-      appId: ALGOLIA_APP_ID ? ALGOLIA_APP_ID : "dbt",
+      apiKey: ALGOLIA_API_KEY ? ALGOLIA_API_KEY : "Jinjat",
+      indexName: ALGOLIA_INDEX_NAME ? ALGOLIA_INDEX_NAME : "Jinjat",
+      appId: ALGOLIA_APP_ID ? ALGOLIA_APP_ID : "Jinjat",
       //debug: true,
     },
     prism: {
@@ -95,7 +95,7 @@ var siteSettings = {
           to: "/docs/introduction",
           label: "Docs",
           position: "left",
-          activeBaseRegex: "docs/(?!(dbt-cloud))",
+          activeBaseRegex: "docs",
         },
         {
           to: "/reference/dbt_project.yml",
@@ -127,7 +127,7 @@ var siteSettings = {
         },
         {
           label: "Github",
-          to: "https://www.getdbt.com/signup/",
+          to: "https://github.com/jinjat-data/jinjat",
           position: "right",
           className: "nav-create-account button button--primary",
         },
@@ -138,22 +138,22 @@ var siteSettings = {
         {
           html: `
           <div class='footer__items'>
-            <a href='https://www.getdbt.com/cloud/terms/'>Terms of Service</a>
-            <a href='https://www.getdbt.com/cloud/privacy-policy/'>Privacy Policy</a>
-            <a href='https://www.getdbt.com/security/'>Security</a>
+            <a href='https://jinjat.com/cloud/terms/'>Terms of Service</a>
+            <a href='https://jinjat.com/cloud/privacy-policy/'>Privacy Policy</a>
+            <a href='https://jinjat.com/security/'>Security</a>
             <button id=\"ot-sdk-btn\" onclick="openPreferenceCenter()">Cookie Settings</button>
           </div>
 
           <div class='footer__items--right'>
-            <a href='https://twitter.com/getdbt'><i class="fa-brands fa-twitter"></i></a>
-            <a href='https://www.getdbt.com/community/join-the-community/'><i class="fa-brands fa-slack"></i></a>
-            <a href='https://github.com/dbt-labs/dbt-core'><i class="fa-brands fa-github"></i></a>
+            <a href='https://twitter.com/jinjatdata'><i class="fa-brands fa-twitter"></i></a>
+            <a href='https://jinjat.com/community/join-the-community/'><i class="fa-brands fa-slack"></i></a>
+            <a href='https://github.com/jinjat-data/jinjat'><i class="fa-brands fa-github"></i></a>
           </div>
           `,
         },
       ],
 
-      copyright: `Copyright © ${new Date().getFullYear()} dbt Labs™, Inc. All Rights Reserved.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Jinjat, Inc. All Rights Reserved.`,
     },
   },
   presets: [
@@ -178,16 +178,7 @@ var siteSettings = {
           //showLastUpdateAuthor: false,
 
           sidebarCollapsible: true,
-        },
-        blog: {
-          blogTitle: "dbt Developer Blog",
-          blogDescription: "Technical tutorials from the dbt Community.",
-          postsPerPage: 20,
-          blogSidebarTitle: "Recent posts",
-          blogSidebarCount: 5,
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-        },
+        }
       },
     ],
   ],

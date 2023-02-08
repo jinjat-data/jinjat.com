@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react"
-import { versions } from '../../dbt-versions'
+import { versions } from '../../jinjat-versions'
 
 const lastReleasedVersion = versions && versions.find(ver => ver.version && ver.version != "" && !ver.isPrerelease);
 
