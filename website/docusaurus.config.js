@@ -216,8 +216,7 @@ var siteSettings = {
         "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
       crossorigin: "anonymous",
     },
-    {rel: 'icon', href: '/img/favicon.png', type: 'image/png'},
-    {rel: 'icon', href: '/img/favicon.svg', type: 'image/svg+xml'},
+    {rel: 'icon', href: '/img/favicon.ico', type: 'image/favicon'}
   ],
 };
 
