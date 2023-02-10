@@ -17,14 +17,14 @@ const dbtProjectSteps = [
         name: '⒉ Write parametrized SQL',
         file: '~/dbtproject/analysis/order_stats.sql',
         lang: 'sql',
-        code: `{%- set payload = request().query %}
+        code: `{%- set query_params = request().query %}
 
 select  order_date, 
         count(*) as orders, 
         count(distinct customer_id) as users
 from {{ ref('orders') }} 
 group by order_date
-where status = '{{query.status}}'`,
+where status = '{{query_params.status}}'`,
     },
     {
         name: '⒊ Define OpenAPI',
