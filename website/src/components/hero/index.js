@@ -15,12 +15,16 @@ const dbtProjectSteps = [
     },
     {
         name: '⒉ Write parametrized SQL',
-        file: '~/dbtproject/analysis/example_endpoint.sql',
+        file: '~/dbtproject/analysis/order_stats.sql',
         lang: 'sql',
-        code: `{%- set payload = request().body %}
+        code: `{%- set payload = request().query %}
 
-select count(*) from users 
-where {{query.number}}`,
+select  order_date, 
+        count(*) as orders, 
+        count(distinct customer_id) as users
+from {{ ref('orders') }} 
+group by order_date
+where status = '{{query.status}}'`,
     },
     {
         name: '⒊ Define OpenAPI',
@@ -28,21 +32,18 @@ where {{query.number}}`,
         lang: 'yml',
         code: `version: 2
 analyses:
-  - name: example_endpoint
+  - name: order_stats
     description: Example endpoint to demonstrate Jinjat
     config:
       jinjat:
+        method: get
         openapi:
-          get:
-            requestBody:
-              content:
-                application/json:
-                  schema:
-                    type: object
-                    properties:
-                      number:
-                        type: number
-                        default: 1`
+          parameters:
+            - in: query
+              name: status
+              schema:
+                type: string
+                enum: ['placed', 'shipped', 'completed']`
     }
 ]
 
@@ -58,8 +59,13 @@ const jinjatSteps = [
         name: '⒌ Serve REST API',
         file: '~zsh',
         code: `% jinjat serve 
-INFO     Registering \`example_endpoint\` route
-INFO:    Uvicorn running on http://127.0.0.1:8581`
+INFO     Registering \`order_stats\` route
+INFO:    Uvicorn running on http://127.0.0.1:8581
+
+% curl http://127.0.0.1:8581/0.1/jaffle_shop/order_stats?status=shipped
+[
+    {"order_date": "2018-01-07", "orders": 102, "users": 80}
+]`
     },
     {
         name: `⒍ Expose UI <i>(optional)</i>`,

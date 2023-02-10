@@ -7,6 +7,7 @@
     text-align: left;
     align-items: stretch;
     padding-top: 10px;
+    width: 620px;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.75) none repeat scroll 0% 0% / auto padding-box border-box;
     transition: all 0.3s ease 0s;
