@@ -15,8 +15,8 @@ function CodeBlock({fileName, language, code}) {
                     <div className={styles.CodeBlockCloser}></div>
                 </div>
                 <div className={styles.CodeBlockAli}>
-                    <input type="text" spellCheck="false" disabled tabIndex="-1" value={fileName}
-                           className={styles.CodeBlockFilename}/></div>
+                   {fileName}
+                </div>
             </div>
             <Highlight {...defaultProps} theme={prismTheme} code={code} language={language}>
                 {({className, style, tokens, getLineProps, getTokenProps}) => (

@@ -20,7 +20,7 @@
     align-items: center;
     padding: 0px 16px;
     gap: 12px;
-    grid-template-columns: 45px 342px 45px;
+    grid-template-columns: 45px 470px 45px;
     box-sizing: border-box;
 }
 
@@ -38,26 +38,10 @@
     box-sizing: border-box;
 }
 
-.CodeBlockFilename {
-    position: absolute;
-    border: 0px none rgba(255, 255, 255, 0.6);
-    margin: 0px;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(255, 255, 255, 0.6);
-    font-family: Inter, sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    inset: 0px;
-    letter-spacing: 0.32px;
-    line-height: 12px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
 .CodeBlockAli {
     position: relative;
     height: 16px;
-    color: rgba(255, 255, 255, 0.298);
+    color: rgba(255, 255, 255, 0.6);
     font-family: Inter, sans-serif;
     font-size: 12px;
     font-weight: 500;

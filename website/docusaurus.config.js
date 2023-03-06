@@ -98,7 +98,7 @@ var siteSettings = {
           activeBaseRegex: "docs",
         },
         {
-          to: "/reference/dbt_project.yml",
+          to: "/reference/jinjat_project.yml",
           label: "Reference",
           position: "left",
           activeBasePath: "reference",
