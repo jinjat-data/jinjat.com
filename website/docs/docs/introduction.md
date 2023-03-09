@@ -13,5 +13,5 @@ The short answer is to empower analytics engineers to create customer facing app
 
 ## Related docs
 
-* Installation
+* [Installation](/installation)
 
