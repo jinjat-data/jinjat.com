@@ -51,12 +51,13 @@ analyses:
 const jinjatSteps = [
     {
         name: '⒋ Install Jinjat',
-        lang: 'bash',
+        lang: 'shell',
         file: '~zsh',
         code: `pip install jinjat`
     },
     {
         name: '⒌ Serve REST API',
+        lang: 'shell',
         file: '~zsh',
         code: `% jinjat serve 
 INFO     Registering \`order_stats\` route
@@ -68,16 +69,15 @@ INFO:    Uvicorn running on http://127.0.0.1:8581
 ]`
     },
     {
-        name: `⒍ Expose UI <i>(optional)</i>`,
+        name: `⒍ Generate UI`,
         file: '~zsh',
-        lang: 'markdown',
-        code: `% npm create refine-app@latest my-project
- ? Select your project type: 
- ❯ refine-jinjat
+        lang: 'shell',
+        code: `% jinjat serve --refine
+INFO     Registering \`order_stats\` route
+INFO:    Uvicorn running on http://127.0.0.1:8581
 
- ? Auth Provider:
- ❯ None
-% npm run dev`
+% open http://127.0.0.1:8581
+`
     }
 ]
 

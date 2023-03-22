@@ -27,8 +27,6 @@ analyses:
           - jmespath
         transform_request: 
           - jmespath
-        response_model: 
-        request_model: 
     columns:
       - name: <column_name>
         [description](description): <markdown_string>

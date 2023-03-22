@@ -1,9 +1,9 @@
-david_krevitt:
-  name: David Krevitt
-  job_title: Marketing
+buremba:
+  name: Burak Emre Kabakci
+  job_title: Founder
   image_url: /img/blog/authors/dkrevitt.jpg
-  organization: dbt Labs
+  organization: Jinjat
   description: Laziness is a virtue
   links:
-    - url: https://twitter.com/dkrevitt
+    - url: https://twitter.com/bu7emba
       icon: fa-twitter

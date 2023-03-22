@@ -104,6 +104,11 @@ var siteSettings = {
           activeBasePath: "reference",
         },
         {
+          to: "/admin-api/docs",
+          label: "Admin API",
+          position: "right",
+        },
+        {
           label: "Community",
           position: "right",
           items: [
@@ -177,7 +182,7 @@ var siteSettings = {
           showLastUpdateTime: true,
           //showLastUpdateAuthor: false,
 
-          sidebarCollapsible: true,
+          sidebarCollapsible: false,
         }
       },
     ],

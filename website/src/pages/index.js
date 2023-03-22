@@ -14,9 +14,8 @@ function getBanner() {
 
 function Home() {
   const featuredResource = {
-    title: "How we structure our dbt projects",
-    description: "Our hands-on learnings for how to structure your dbt project for success and gain insights into the principles of analytics engineering.",
-    link: "/guides/best-practices/how-we-structure/1-guide-overview",
+    title: "Introducing Jinjat: a new way to build data apps",
+    link: "/blog/introducing-jinjat",
     image: "/img/structure-dbt-projects.png"
   }
   return (
@@ -65,7 +64,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="featured-header"><h2>Integrations</h2></div>
+            <div className="featured-header"><h2>Blog</h2></div>
             <div className="featured-resource">
             <BlogPostCard postMetaData={featuredResource} />
             </div>
