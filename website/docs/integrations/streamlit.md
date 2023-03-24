@@ -8,8 +8,4 @@ Jinjat has an embedded Streamlit app that plugs in your local dbt projects. It c
  * A page for each of your dbt analysis that has a form in it. The result is displayed in a table.
 
 
-Usage:
-
-```bash
-jinjat streamlit
-```
+Refer to [`jinjat streamlit`](/reference/commands/streamlit) command.

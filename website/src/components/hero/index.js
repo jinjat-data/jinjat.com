@@ -10,14 +10,14 @@ const dbtProjectSteps = [
         lang: 'yml',
         file: '~/dbtproject/packages.yml',
         code: `packages:
-  - package: jinjat/jinjat
-    version: 0.1.0`,
+  - package: https://github.com/jinjat-data/dbt_jinjat
+    version: 0.1`,
     },
     {
         name: '⒉ Write parametrized SQL',
         file: '~/dbtproject/analysis/order_stats.sql',
         lang: 'sql',
-        code: `{%- set query_params = request().query %}
+        code: `{%- set query_params = jinjat.request().query %}
 
 select  order_date, 
         count(*) as orders, 

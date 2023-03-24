@@ -2,7 +2,7 @@
 title: Deploy
 ---
 
-:::warning Note
+:::warning Jinjat is not production-ready, yet.
 Jinjat is still in alpha and it's not recommended to use it in production!
 :::
 

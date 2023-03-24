@@ -4,6 +4,8 @@ const sidebarSettings = {
     "docs/supported-data-platforms",
     "docs/installation",
     "docs/getting-started",
+    "docs/api-routes",
+    "docs/authorization",
     {
       type: "category",
       label: "Integrations",
@@ -20,7 +22,7 @@ const sidebarSettings = {
       ],
     },
     "docs/deploy",
-    "docs/architecture",
+    "docs/advanced",
     {
       type: "category",
       label: "Frequently asked questions",

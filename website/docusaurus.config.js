@@ -158,7 +158,7 @@ var siteSettings = {
         },
       ],
 
-      copyright: `Copyright © ${new Date().getFullYear()} Jinjat, Inc. All Rights Reserved.`,
+      copyright: `Copyright © ${new Date().getFullYear()}. All Rights Reserved.`,
     },
   },
   presets: [

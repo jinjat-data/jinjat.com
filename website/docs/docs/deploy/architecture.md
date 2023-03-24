@@ -1,6 +1,0 @@
----
-title: Architecture
-id: architecture
----
-
-/
