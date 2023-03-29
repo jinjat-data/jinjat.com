@@ -75,9 +75,17 @@ POST /0.1/jaffle_shop/crud       -->   _create_customers.sql
 You can access your path parameters as follows:
 
 ```sql
-select * from users where id = {{ jinjat.request().params.id }}
+select * from users where id = {{ request().params.id }}
 ```
 
 :::
 
-In order to secure your API, you should write OpenAPI specification for your analyses. 
+:::tip
+
+In order to secure your API, you should write OpenAPI specification for your analyses. [Read more aobut how OpenAPI integration works](/reference/openapi).
+
+:::
+
+### Static files
+
+If you have a directory called `./static` in your dbt project directory, Jinjat will serve all the files inside the directory.

@@ -123,16 +123,8 @@ export default function BlogLayout(props) {
          )
        }
  
-       <div className="blog-breadcrumbs">
-         <div className="container">
-           <Link to="/" title="dbt Docs">dbt Docs</Link>
-           <Link to="/blog" title="Blog">Developer Blog</Link>
-           {(!isBlogList && breadcrumbTitle) && 
-             <Link to="#" title={breadcrumbTitle}>
-               {breadcrumbTitle}
-             </Link>
-           }
-         </div>
+      <div className="blog-breadcrumbs">
+         <div className="container"> </div>
        </div>
 
       <div className="container margin-vert--lg">

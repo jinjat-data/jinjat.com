@@ -8,10 +8,12 @@ const sidebarSettings = {
     "docs/authorization",
     {
       type: "category",
-      label: "Integrations",
+      label: "Front-end",
       link: {
         type: "generated-index",
-        title: "Integrations",
+        title: "Front-end Integrations",
+        description:
+        "Our Frequently Asked Questions (FAQs) section is a space where you can find an answer to some questions we get asked a lot (but that we’re happy to answer!). If you have a question or are still stuck on something, please create a discussion on Github.",
         slug: "/docs/integration",
       },
       items: [
@@ -42,6 +44,7 @@ const sidebarSettings = {
     },
   ],
   reference: [
+    "reference/openapi",
     {
       type: "category",
       label: "Project configs",

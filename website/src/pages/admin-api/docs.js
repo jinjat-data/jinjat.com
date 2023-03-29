@@ -44,7 +44,7 @@ const Rapidoc = () => {
             nav-item-spacing="relaxed"
             primary-color="#DCBB0E" render-style="focused"
             show-method-in-nav-bar="as-colored-block"
-            show-header="false"
+            show-header="true"
             show-components="true"
             show-curl-before-try="true"
             style={{
@@ -54,9 +54,7 @@ const Rapidoc = () => {
             }}>
 
             <div slot="overview">
-                <a href="openapi.json" style={{
-                    color: 'DCBB0E'
-                }}>openapi.json</a>
+               <b>The URL above is a demo application. You can enter your Jinjat URL to see the relevant API doc for your version.<br/><br/></b> 
             </div>
 
         </rapi-doc>

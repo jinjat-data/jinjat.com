@@ -3,7 +3,6 @@
 # This adds the tag to the Categories sidebar
 # and allows to add custom descriptions for tags
 
-- name: analytics craft
-  display_title: Analytics craft
-  description: The art of being an analytics practitioner.
+- name: tutorial
+  display_title: Tutorials
   is_featured: true

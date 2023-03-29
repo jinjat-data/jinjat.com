@@ -15,7 +15,7 @@ packages:
     version: 0.1
 ```
 
-Jinjat dbt package comes with a set of macros that lets you customize the API endpoints so it's optional if you just create endpoints that just execute static SQL queries. The most important macro is `request()`, which has information about the current request. 
+Jinjat dbt package comes with a set of macros that lets you customize the API endpoints so it's optional if you just create endpoints that just execute static SQL queries. The most important macro is `request()`, which has information about the current request.
 
 ### Install Jinjat
 
@@ -36,16 +36,22 @@ jinjat serve
 You should see logs similar to:
 
 ```
-INFO     Registering `order_stats` route
-INFO:    Uvicorn running on http://127.0.0.1:8581
+0 analysis found with `jinjat` config
+INFO:    Uvicorn running on [http://127.0.0.1:8581](http://127.0.0.1:8581)
 ```
 
-Our `order_stats` analysis is now an API endpoint, congrats!
+Now visit your API page, you should see the following message:
 
+```json
+{
+  "admin_api_docs": "http://127.0.0.1:8581/admin/docs",
+  "magic": "https://jin.jat",
+  ...
+}
+```
+
+Congrats on deploying your first API!
 
 ## What to do next?
 
-* Learn how you can configure OpenAPI spec for your API
-* Learn how to create user interface from your analysis
-
-
+- [Create your first API Endpoint](/docs/getting-started)

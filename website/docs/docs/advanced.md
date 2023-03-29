@@ -4,7 +4,7 @@ title: "Advanced"
 
 # Tech Stack
 
-Jinjat uses dbt Core under the hood. It uses FastAPI as web framework in backend and support Streamlit and Refine as front-end. The Refine integration generates a Refine project (which can be backed by Remix, Next.js as well) and uses JsonForm to generate the layout. Jinjat relies on your OpenAPI spec defined in dbt resources files for each operation. You can use `jinjat_project.yml` file to extend the OpenAPI spec for your needs.
+Jinjat uses [dbt Core](https://github.com/dbt-labs/dbt-core) under the hood. It uses [FastAPI](https://fastapi.tiangolo.com/) as web framework in backend and support [Streamlit](/docs/integrations/streamlit) and [Refine](/docs/integrations/refine) as front-end. The Refine integration generates a Refine project (which can be backed by Remix, Next.js as well) and uses [JsonForm](https://jsonforms.io) to generate the layout. Jinjat relies on your OpenAPI spec defined in dbt resources files for each operation. 
 
 # Request Flow
 

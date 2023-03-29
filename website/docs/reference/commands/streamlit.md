@@ -8,7 +8,7 @@ The `jinjat streamlit` command generates a Streamlit app from your dbt project. 
 
 ### Details
 
-Usage: `jinjat serve [OPTIONS]`
+Usage: `jinjat streamlit [OPTIONS]`
 
 ```
 Options:

@@ -33,7 +33,7 @@ function Home() {
                 <div>
                   <Card
                     title="What is jinjat?"
-                    body="Jinjat lets you develop REST applications from your dbt analysis and user interfaces from your OpenAPI definitions. ❯"
+                    body="Jinjat is a new way of building data application, learn more about the idea behind Jinjat ❯"
                     link="/docs/introduction"
                     icon="question-mark"
                   />
@@ -41,24 +41,24 @@ function Home() {
                 <div>
                   <Card
                     title="Getting started guide"
-                    body="Learn how to set up Jinjat and build your first app. Jinjat requires you to know dbt in advance. ❯"
-                    link="/docs/get-started/getting-started/overview"
+                    body="Learn how to set up Jinjat and build your first app ❯"
+                    link="/docs/getting-started"
                     icon="book"
                   />
                 </div>
                 <div>
                   <Card
-                    title="Docs"
-                    body="Discover everything Jinjat has to offer from the basics to advanced concepts. ❯"
-                    link="/docs/build/projects"
+                    title="Routing"
+                    body="Learn how we map dbt analysis files as API endpoints ❯"
+                    link="/docs/api-routes"
                     icon="docs"
                   />
                 </div>
                 <div>
                   <Card
-                    title="Integrations"
-                    body="Jinjat supports all the databases dbt supports out of the box and also integrates  ❯"
-                    link="/docs/supported-data-platforms"
+                    title="Automatic Front-end"
+                    body="Jinjat automatically generates React and Streamlit apps from your dbt projects  ❯"
+                    link="/docs/front-end"
                     icon="rocket"
                   />
                 </div>
@@ -77,7 +77,7 @@ function Home() {
                 <Card
                   title="CRUD applications"
                   body="Generate REST APIs and UIs automatically for dbt sources"
-                  link="/jinjat-cli/generate#crud"
+                  link="/blog/develop-crud-app"
                   icon="pencil-paper"
                 />
               </div>
@@ -85,7 +85,7 @@ function Home() {
                 <Card
                   title="Metric store"
                   body="Create Business Intelligence apps using dbt-metrics with your custom front-end"
-                  link="/jinjat-cli/generate#metrics"
+                  link="/blog/serve-dbt-metrics"
                   icon="book"
                 />
               </div>
@@ -93,7 +93,7 @@ function Home() {
                 <Card
                   title="Cloud-native Backend APIs"
                   body="Use your custom UDF, procedures natively in SQL to interact with your cloud data-warehouse"
-                  link="https://hub.getdbt.com/"
+                  link="/blog/develop-cloud-native-app"
                   icon="packages"
                 />
               </div>

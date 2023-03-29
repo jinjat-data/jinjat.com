@@ -3,8 +3,7 @@ title: "Supported data platforms"
 id: "supported-data-platforms"
 ---
 
-Jinjat works with the dbt adapters out of the box as it uses dbt under the hood. 
-However; not all the adapters are tested yet. Here are the list of adapters tested at the moment.
+Jinjat works with the dbt adapters out of the box as it uses dbt under the hood. However; not all the adapters are tested yet. 
 
 ### Supported Adapters
 
@@ -19,4 +18,4 @@ However; not all the adapters are tested yet. Here are the list of adapters test
 
 ### Supporting a new adapter
 
-Jinjat is in the early phases so we would love to get your help verifying the adapters that work. 
+Jinjat is in the early phases so we would love to get your help verifying the adapters that work. Feel free to [create issues on Github](https://github.com/jinjat-data/jinjat)!

@@ -14,13 +14,13 @@ Jinjat doesn't enable authorization by default. The following features are curre
 
 ```yml
 openapi:
+    security: 
+        - basicAuth
     components:
-    securitySchemes:
-        basicAuth: 
-        type: http
-        scheme: basic
-security: 
-  - basicAuth
+        securitySchemes:
+            basicAuth: 
+            type: http
+            scheme: basic
 ```
 
 </File>
@@ -34,23 +34,23 @@ security:
 
 ```yml
 openapi:
+    security: 
+    - oAuth:
+        - write_pets
+        - read_pets
     components:
-    securitySchemes:
-        oAuth:
-            type: oauth2
-            description: This API uses OAuth 2 with the implicit grant flow.
-            flows:
-                implicit: 
-                    authorizationUrl: https://api.example.com/oauth2/authorize
-                    tokenUrl: 
-                    refreshUrl:
-                    scopes:
-                        read_pets: read your pets
-                        write_pets: modify pets in your account
-security: 
-  - oAuth:
-    - write_pets
-    - read_pets
+        securitySchemes:
+            oAuth:
+                type: oauth2
+                description: This API uses OAuth 2 with the implicit grant flow.
+                flows:
+                    implicit: 
+                        authorizationUrl: https://api.example.com/oauth2/authorize
+                        tokenUrl: https://api.example.com/oauth2/token
+                        refreshUrl: https://api.example.com/oauth2/refresh
+                        scopes:
+                            read_pets: read your pets
+                            write_pets: modify pets in your account
 ```
 
 </File>

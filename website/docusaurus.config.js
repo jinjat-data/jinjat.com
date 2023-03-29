@@ -104,31 +104,20 @@ var siteSettings = {
           activeBasePath: "reference",
         },
         {
+          to: "/blog/tags/tutorial",
+          label: "Tutorials",
+          position: "left",
+          activeBasePath: "blog/tags/tutorial",
+        },
+        {
           to: "/admin-api/docs",
           label: "Admin API",
           position: "right",
         },
         {
-          label: "Community",
+          to: "/blog",
+          label: "Blog",
           position: "right",
-          items: [
-            {
-              label: "Join the Community",
-              to: "/community/join",
-            },
-            {
-              label: "Become a contributor",
-              to: "/community/contribute",
-            },
-            {
-              label: "Community Forum",
-              to: "/community/forum",
-            },
-            {
-              label: "Events",
-              to: "/community/events",
-            },
-          ],
         },
         {
           label: "Github",
@@ -182,7 +171,7 @@ var siteSettings = {
           showLastUpdateTime: true,
           //showLastUpdateAuthor: false,
 
-          sidebarCollapsible: false,
+          sidebarCollapsible: true,
         }
       },
     ],

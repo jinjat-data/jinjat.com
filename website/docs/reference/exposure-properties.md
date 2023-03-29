@@ -3,12 +3,12 @@ title: Exposure properties
 ---
 
 ## Related documentation
-- [Using exposures](exposures)
-- [Declaring resource properties](configs-and-properties)
+- [Using exposures](https://docs.getdbt.com/docs/build/exposures)
+- [dbt exposure properties](https://docs.getdbt.com/reference/exposure-properties)
 
 ## Overview
-Exposures are defined in `.yml` files nested under an `exposures:` key. You may define `exposures` in YAML files that also define define `sources` or `models`.
 
+Exposures are defined in `.yml` files nested under an `exposures:` key. You may define `exposures` in YAML files that also define define `sources` or `models`.
 You can name these files `whatever_you_want.yml`, and nest them arbitrarily deeply in subfolders within the `models/` directory.
 
 
@@ -19,10 +19,9 @@ version: 2
 
 exposures:
   - name: <string_with_underscores>
-    [description](description): <markdown_string>
     type: {dashboard, analysis, application}
-    url: <string>
     maturity: {high, medium, low}
+    label: "Human-Friendly Name for this Exposure!"
     [tags](https://docs.getdbt.com/reference/resource-configs/tags): [<string>]
     [meta](https://docs.getdbt.com/reference/resource-configs/meta): {<dictionary>}
     owner:
@@ -35,7 +34,6 @@ exposures:
       - source('name', 'table')
       - metric('metric_name')
       
-    label: "Human-Friendly Name for this Exposure!"
     [config](https://docs.getdbt.com/reference/resource-properties/config):
       enabled: true | false
       jinjat:

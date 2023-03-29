@@ -2,20 +2,37 @@
 title: jinjat_project.yml
 ---
 
-Jinjat projects have an optional `jinjat_project.yml` file that lets you assign metadata about your dbt project. While it's optional, it's recommended.
-
-The following is a list of all available configurations in the `jinjat_project.yml` file.
-
 :::info jinjat_project.yml
-Jinjat uses dbt under the hood which requires `dbt_project.yml` file. This file is also used by Jinjat for the project version and name. `jinjat_project.yml` is different than this file and it's optional. It only includes metadata about your dbt project that is relevant to Jinjat.
+Jinjat uses dbt under the hood which requires `dbt_project.yml` file. This file is also used by Jinjat for the project version and name. `jinjat_project.yml` is different than this file and it's optional. 
+:::
+
+`jinjat_project.yml` includes metadata about your dbt project that is relevant to Jinjat. While it's optional, it's recommended. Here are the list of configurations available:
 
 <File name='jinjat_project.yml'>
 
 ```yml
-max_limit: 
-default_limit: 
-[refine](project-configs/name): string
-[openapi](project-configs/config-version): 2
+[query](#query):
+  max_limit: <50000>
+  default_limit: <1000>
+
+refine:
+  [importmaps](#import-maps):
+    - https://www.unpkg.com/@mui/material@5.11.15
+  [jsonforms](#jsonforms):
+    renderers:
+      rating: "@mui/material/Rating"
+
+[openapi](openapi#project-configs):
+    info:
+        description: "My custom project"
 ```
 
 </File>
+
+### Query
+
+By default, Jinjat passes your queries to `limit_query` macro before executing them in your database.
+
+### Import Maps
+
+### JsonForms

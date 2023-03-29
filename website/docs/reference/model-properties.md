@@ -2,8 +2,11 @@
 title: Model properties
 ---
 
-Models properties can be declared in `.yml` files in your `models/` directory (as defined by the [`model-paths` config](model-paths)).
+## Related documentation
+- [Using models](https://docs.getdbt.com/docs/build/models)
+- [dbt model properties](https://docs.getdbt.com/reference/model-properties)
 
+Models properties can be declared in `.yml` files in your `models/` directory (as defined by the [`model-paths` config](model-paths)).
 You can name these files `whatever_you_want.yml`, and nest them arbitrarily deeply in subfolders within the `models/` directory.
 
 <File name='models/<filename>.yml'>
@@ -13,18 +16,11 @@ version: 2
 
 models:
   - [name](model_name): <model name>
-    [description](description): <markdown_string>
-    [config](resource-properties/config):
-      [<model_config>](model-configs): <config_value>
     columns:
       - name: <column_name> # required
         [description](description): <markdown_string>
-        [meta](meta): {<dictionary>}
-        [quote](quote): true | false
-        [tests](resource-properties/tests):
-          - <test>
-          - ... # declare additional tests
-        [tags](resource-configs/tags): [<string>]
+        [meta](meta):
+
 
       - name: ... # declare properties of additional columns
 

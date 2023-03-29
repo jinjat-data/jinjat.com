@@ -19,7 +19,7 @@ And a [dbt analysis](https://docs.getdbt.com/docs/build/analyses) called `order_
 <File name='analyses/order_stats.sql' language="sql">
 
 ```sql
-{%- set query_params = jinjat.request().query %}
+{%- set query_params = request().query %}
 
 select  order_date, 
         count(*) as orders, 
