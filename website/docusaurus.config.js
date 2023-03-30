@@ -14,7 +14,7 @@ if (!process.env.CONTEXT || process.env.CONTEXT == "production") {
 
 var GIT_BRANCH;
 if (!process.env.CONTEXT || process.env.CONTEXT == "production") {
-  GIT_BRANCH = "current";
+  GIT_BRANCH = "main";
 } else {
   GIT_BRANCH = process.env.HEAD;
 }
@@ -23,7 +23,7 @@ let { ALGOLIA_APP_ID, ALGOLIA_API_KEY, ALGOLIA_INDEX_NAME } = process.env;
 
 let metatags = [];
 // If Not Current Branch, do not index site
-if (GIT_BRANCH !== "current") {
+if (GIT_BRANCH !== "main") {
   metatags.push({
     tagName: "meta",
     attributes: {
@@ -48,7 +48,7 @@ var siteSettings = {
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
   themeConfig: {
-    image: "/img/avatar.png",
+    image: "/img/jinjat-banner.png",
     colorMode: {
       defaultMode: "light",
       disableSwitch: false,
