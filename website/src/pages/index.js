@@ -6,12 +6,6 @@ import Card from '@site/src/components/card';
 import BlogPostCard from '@site/src/components/blogPostCard';
 import Hero from '@site/src/components/hero';
 
-const bannerAnimation = require('@site/static/img/banner-white.svg');
-
-function getBanner() {
-  return { __html: bannerAnimation };
-};
-
 function Home() {
   const featuredResource = {
     title: "Introducing Jinjat: a new way of building data applications",
@@ -102,7 +96,6 @@ function Home() {
 
         </div>
 
-        <div className="banner-animation" dangerouslySetInnerHTML={getBanner()}></div>
       </Layout>
     </>
   );
