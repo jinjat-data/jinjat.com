@@ -20,7 +20,7 @@ The `jinjat generate [macro_name]` command is similar to [run-operation](https:/
 For the `refine_app` macro above, here is how it works when you call `generate` command:
 
 ```bash
-$ jinjat generate refine_app --args '{to: ref("customers")}'                        
+$ jinjat generate refine_app --args '{to: ref("customers"), name: customers}'                        
 └── analyses
     └── crud
         ├── _list_customers.sql ✔️

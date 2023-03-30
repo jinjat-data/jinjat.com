@@ -140,7 +140,7 @@ var siteSettings = {
 
           <div class='footer__items--right'>
             <a href='https://twitter.com/jinjatdata'><i class="fa-brands fa-twitter"></i></a>
-            <a href='https://jinjat.com/community/join-the-community/'><i class="fa-brands fa-slack"></i></a>
+            <!-- <a href='https://jinjat.com/community/join-the-community/'><i class="fa-brands fa-slack"></i></a> -->
             <a href='https://github.com/jinjat-data/jinjat'><i class="fa-brands fa-github"></i></a>
           </div>
           `,

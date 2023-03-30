@@ -1,11 +1,11 @@
 ---
-title: "Introducing Jinjat: a new way to build data apps"
+title: "Introducing Jinjat: a new way of building data apps"
 description: ""
 slug: introducing-jinjat
 
 authors: [buremba]
 
-tags: [announcements]
+tags: [announcement]
 hide_table_of_contents: true
 
 date: 2023-03-23
@@ -14,3 +14,5 @@ is_featured: true
 
 
 Heya!
+
+## Test

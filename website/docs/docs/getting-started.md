@@ -48,7 +48,7 @@ Jinjat scans all the analysis resources in your dbt project and creates an API e
 curl http://127.0.0.1:8581/[dependency_version]/[dependency_name]/[analysis_under_the_dependency]
 ```
 
-Additionally, you can refine the OpenAPI specification for your analyses with resource configs:
+Additionally, you can define the OpenAPI specification for your analyses with resource configs:
 
 
 <File name='analyses/order_stats.sql' language="sql">

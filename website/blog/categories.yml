@@ -6,3 +6,6 @@
 - name: tutorial
   display_title: Tutorials
   is_featured: true
+- name: announcement
+  display_title: Announcements
+  is_featured: true

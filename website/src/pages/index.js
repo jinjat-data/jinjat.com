@@ -14,7 +14,7 @@ function getBanner() {
 
 function Home() {
   const featuredResource = {
-    title: "Introducing Jinjat: a new way to build data apps",
+    title: "Introducing Jinjat: a new way of building data applications",
     link: "/blog/introducing-jinjat",
     image: "/img/structure-dbt-projects.png"
   }
@@ -25,7 +25,7 @@ function Home() {
       </Head>
       <Layout permalink="/">
         <div className="container container--fluid home" style={{ "padding": "0", "background": "#FFF" }}>
-          <Hero heading="Data applications made simple with dbt" subheading="Jinjat is a low-code application framework that turns your dbt projects into web apps" showGraphic />
+         <Hero heading="Data applications made simple with dbt" subheading="Jinjat is a low-code application framework that turns your dbt projects into web apps" showGraphic />
           <section className="resource-section row">
             <div className="popular-header"><h2>Popular resources</h2></div>
             <div className="popular-resources">
@@ -33,7 +33,7 @@ function Home() {
                 <div>
                   <Card
                     title="What is jinjat?"
-                    body="Jinjat is a new way of building data application, learn more about the idea behind Jinjat ❯"
+                    body="Learn more about the idea behind Jinjat ❯"
                     link="/docs/introduction"
                     icon="question-mark"
                   />
@@ -57,7 +57,7 @@ function Home() {
                 <div>
                   <Card
                     title="Automatic Front-end"
-                    body="Jinjat automatically generates React and Streamlit apps from your dbt projects  ❯"
+                    body="Learn how Jinjat automatically generates React and Streamlit apps from dbt projects ❯"
                     link="/docs/front-end"
                     icon="rocket"
                   />

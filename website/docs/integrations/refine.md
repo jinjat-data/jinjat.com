@@ -34,7 +34,7 @@ exposures:
 ```
 
 :::tip
- You can generate the scaffolding with `jinjat generate refine_app --args '{args}'`
+ You can generate the scaffolding with `jinjat generate refine_app --args "{to: ref('customers'), name: customers}"`
 :::
 
 ### analysis
@@ -51,11 +51,6 @@ exposures:
           button_label: Perform action
           menu_icon: AutoAwesome
 ```
-
-:::tip
- You can generate the scaffolding with `jinjat generate refine_app --args '{args}'`
-:::
-
 
 ### dashboard
 
@@ -80,10 +75,12 @@ Refine integration uses [JsonForms](https://jsonforms.io) with [Material UI](htt
             renderer: rating
 ```
 
-Jinjat supports following components:
+You can register custom components using [`refine.jsonforms`](/reference/jinjat_project.yml#jsonforms) property in `jinjat_project.yml`.
 
 
 
 ## Developing
 
-You can 
+Jinjat's Refine integration is open-source. If you want to do further customization such as adding your own theme / design framework or custom React pages, you can fork [jinjat-refine](https://github.com/jinjat-data/jinjat-refine) and build the project in `[DBT_PROJECT_DIR]/static` directory using `npm run build`. The command generates `index.html` and the javascript bundles and when you have `index.html` in your `./static` directory, Jinjat will automatically render it when you start the server with `jinjat serve`. 
+
+You can also switch to different [design components](https://jsonforms.io/docs/renderer-sets) or [plug-in your Vue/Angular components](https://jsonforms.io/docs/renderer-sets) with JsonForms.

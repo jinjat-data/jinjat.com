@@ -32,6 +32,7 @@ export default function BlogLayout(props) {
   } = props;
   const hasSidebar = sidebar && sidebar.items.length > 0;
 
+  
   const { blogMeta, tagData } = usePluginData('docusaurus-build-global-data-plugin');
   const { siteConfig: { presets } } = useDocusaurusContext()
   // Get blog data from docusaurus config
@@ -133,7 +134,8 @@ export default function BlogLayout(props) {
           <main
             className={clsx('col', {
               'col--7': hasSidebar,
-              'col--9': !hasSidebar || isBlogPost,
+              'col--9': (!hasSidebar || isBlogPost) && toc,
+              'col--12': (isBlogPost && !toc),
             })}
             itemScope
             itemType="http://schema.org/Blog">
