@@ -74,8 +74,6 @@ analyses:
 
 You can learn more about the resource configs for dbt analyses [here](/reference/analysis-properties). Jinjat will generate API documentation and make sure that the API requests conform your OpenAPI definition.
 
-dbt 
-
 When you `dbt run`, `request` macro returns default parameters defined in your yml file so your compiles analysis files will have your test data enabled.
 
 [Read more about the macros on documentation](/).

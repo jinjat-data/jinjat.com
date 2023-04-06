@@ -26,10 +26,7 @@ analyses:
         method: get
         [openapi](/reference/openapi#dbt-analysis): <dictionary>
         [fetch](#fetch): <bool>
-        [transform_response](#transform-response): 
-          - jmespath
-        [transform_request](#transform-response): 
-          - jmespath
+        [transform_response](#transform-response): <jmespath_expression>
     columns:
       - name: <column_name>
         meta:
@@ -63,9 +60,45 @@ models:
 
 </File>
 
+Example in analysis:
+
+```yml
+version: 2
+
+analyses:
+  - name: example_endpoint
+    config:
+      tags:
+        - cors
+```
+
 ## fetch
 
-Jinjat tries to fetch the query result when `fetch` is enabled, which is the default value.
+Jinjat tries to fetch the query result when `fetch` is enabled, which is the default value. It's useful when you're executing DDL queries.
+
+```yml
+version: 2
+
+analyses:
+  - name: example_endpoint
+    config:
+      jinjat:
+        fetch: false
+```
+
 
 ## transform_response
 
+You can transform the query result with this option. The default response for the analysis queries is an array with object with properties matching your column names. If you would like to return the first item in the array as a response, here is an example:
+
+```yml
+version: 2
+
+analyses:
+  - name: example_endpoint
+    config:
+      jinjat:
+        transform_response: [0]
+```
+
+The expressions syntax is powered by [jmespath](https://jmespath.org). You can learn more about the jmespath expressions [here](https://jmespath.org/tutorial.html).

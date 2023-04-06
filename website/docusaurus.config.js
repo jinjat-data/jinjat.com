@@ -171,7 +171,7 @@ var siteSettings = {
           showLastUpdateTime: true,
           //showLastUpdateAuthor: false,
 
-          sidebarCollapsible: true,
+          sidebarCollapsible: false,
         }
       },
     ],

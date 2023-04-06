@@ -34,7 +34,7 @@ exposures:
 ```
 
 :::tip
- You can generate the scaffolding with `jinjat generate refine_app --args "{to: ref('customers'), name: customers}"`
+ You can generate the scaffolding with `jinjat generate refine_app --args "{to: ref('customers'), name: customers}"`. [Learn more about how it works](https://github.com/jinjat-data/dbt_jinjat#refine_app-source) in Github.
 :::
 
 ### analysis

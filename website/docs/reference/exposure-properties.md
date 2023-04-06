@@ -11,6 +11,9 @@ title: Exposure properties
 Exposures are defined in `.yml` files nested under an `exposures:` key. You may define `exposures` in YAML files that also define define `sources` or `models`.
 You can name these files `whatever_you_want.yml`, and nest them arbitrarily deeply in subfolders within the `models/` directory.
 
+:::info
+Jinjat only renders the exposures that has `jinjat` property defined under [`meta`](https://docs.getdbt.com/reference/resource-configs/meta) dbt property.
+:::
 
 <File name='models/<filename>.yml'>
 
@@ -19,47 +22,89 @@ version: 2
 
 exposures:
   - name: <string_with_underscores>
-    type: {dashboard, analysis, application}
-    maturity: {high, medium, low}
-    label: "Human-Friendly Name for this Exposure!"
-    [tags](https://docs.getdbt.com/reference/resource-configs/tags): [<string>]
-    [meta](https://docs.getdbt.com/reference/resource-configs/meta): {<dictionary>}
+    type: application
     owner:
       name: <string>
       email: <string>
-    
-    depends_on:
-      - ref('model')
-      - ref('seed')
-      - source('name', 'table')
-      - metric('metric_name')
-      
-    [config](https://docs.getdbt.com/reference/resource-properties/config):
-      enabled: true | false
+    meta:
       jinjat:
-        [refine](/integration/refine):
-
+        [refine](#refine):
+          menu_icon: <icon>
+          actions: 
+            <dictionary>
+          resources:
+            create: <analysis-name>
+            list: <analysis-name>
+            show: <analysis-name>
+            edit: <analysis-name>
+  - name: <string_with_underscores>
+    type: analysis
+    owner:
+      name: <string>
+      email: <string>
+    meta:
+      jinjat:
+        [refine](#refine):
+          button_label: <string>
+          menu_icon: <icon-name>
   - name: ... # declare properties of additional exposures
 ```
 </File>
 
+## Refine
 
-## Example
+Jinjat generates a [Refine](/integrations/refine) page for your exposure. The config lets you customize the generated pages.
 
-<File name='models/jaffle/exposures.yml'>
+## Exposure types
+
+### application
+
+Generates a Refine CRUD page that lets you list, create, update, and optionally delete the data. The values for `actions` and `resources` are analysis names. You can generate the exposure using 
+
+:::tip
+ You can generate the scaffolding with `jinjat generate refine_app --args "{to: ref('customers'), name: customers}"`. [Learn more about how it works](https://github.com/jinjat-data/dbt_jinjat#refine_app-source) in Github.
+:::
 
 ```yaml
-version: 2
-
 exposures:
-
   - name: weekly_jaffle_metrics
-    label: Jaffles by the Week       
-    type: dashboard            
-
+    type: application            
     owner:
-      name: Callum McData
+      name: Burak
       email: data@jaffleshop.com
+    meta:
+      jinjat:
+        refine:
+          menu_icon: AutoAwesome
+          actions:
+            delete: _delete_customers
+          resources:
+            create: _create_customers
+            list: _list_customers
+            show: _get_customer
+            edit: _patch_customers
 ```
 
-</File>
+### analysis
+
+Generates a form that calls the analysis when the form is submitted. `menu_icon` uses MUI icons, you can find list of available options [here](https://mui.com/material-ui/material-icons/).
+
+```yml
+exposures:
+  - name: example_endpoint
+    type: analysis
+    owner:
+      name: Burak
+      email: data@jaffleshop.com
+    meta:
+      jinjat:
+        refine:
+          button_label: Perform action
+          menu_icon: AutoAwesome
+```
+
+### dashboard
+
+:::info
+Dashboard type is not supported yet but the support is in progress.
+:::

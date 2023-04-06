@@ -21,7 +21,7 @@ analysis-paths: ["analyses"]
 
 </File>
 
-Jinjat will generate the following API endpoints:
+Jinjat will generate the following API endpoint:
 
 ```markdown
 /0.1/jaffle_shop/example_endpoint
@@ -71,16 +71,13 @@ GET  /0.1/jaffle_shop/crud/[:id] -->   _id/_get_customer.sql
 POST /0.1/jaffle_shop/crud       -->   _create_customers.sql
 ```
 
-:::tip
 You can access your path parameters as follows:
 
 ```sql
 select * from users where id = {{ request().params.id }}
 ```
 
-:::
-
-:::tip
+:::info
 
 In order to secure your API, you should write OpenAPI specification for your analyses. [Read more aobut how OpenAPI integration works](/reference/openapi).
 
@@ -89,3 +86,14 @@ In order to secure your API, you should write OpenAPI specification for your ana
 ### Static files
 
 If you have a directory called `./static` in your dbt project directory, Jinjat will serve all the files inside the directory.
+
+
+:::tip
+
+If you want to see the columns and raw data returned from your query, you can pass `_debug` query parameter as follows:
+
+```bash
+curl http://127.0.0.1:8581/0.1/jaffle_shop/example_endpoint?_debug
+```
+
+:::
