@@ -14,7 +14,7 @@ When you send a request to Jinjat, it will:
     a. Jinjat returns exception with `400` status code in case the request is not valid.
 2. Apply pre-hook tranformations if defined.
 3. Compile Jinja in your dbt analysis.
-    a. `request()` macro will return the validated request properties such as `query_params`, `body`, and `headers`.
+    a. `jinjat.request()` macro will return the validated request properties such as `query_params`, `body`, and `headers`.
 4. Execute the SQL query in your dbt target.
 5. Validate the response with your OpenAPI spec.
 6. Apply post-hook tranformations if defined.

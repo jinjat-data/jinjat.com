@@ -15,7 +15,7 @@ packages:
     version: 0.1
 ```
 
-Jinjat dbt package comes with a set of macros that lets you customize the API endpoints so it's optional if you just create endpoints that just execute static SQL queries. The most important macro is `request()`, which has information about the current request.
+Jinjat dbt package comes with a set of macros that lets you customize the API endpoints so it's optional if you just create endpoints that just execute static SQL queries. The most important macro is `jinjat.request()`, which has information about the current request.
 
 ### Install Jinjat
 

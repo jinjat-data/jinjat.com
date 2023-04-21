@@ -24,7 +24,7 @@ analysis-paths: ["analyses"]
 Jinjat will generate the following API endpoint:
 
 ```markdown
-/0.1/jaffle_shop/example_endpoint
+curl http://127.0.0.1:8581/0.1/jaffle_shop/example_endpoint
 ```
 
 The files and directories that have `_` prefix is treated as path parameters. Let's say that you have the following file structure:
@@ -74,7 +74,7 @@ POST /0.1/jaffle_shop/crud       -->   _create_customers.sql
 You can access your path parameters as follows:
 
 ```sql
-select * from users where id = {{ request().params.id }}
+select * from users where id = {{ jinjat.request().params.id }}
 ```
 
 :::info
@@ -86,6 +86,29 @@ In order to secure your API, you should write OpenAPI specification for your ana
 ### Static files
 
 If you have a directory called `./static` in your dbt project directory, Jinjat will serve all the files inside the directory.
+
+### System query parameters
+
+
+#### `_limit`
+
+Limits number of returns from the API
+
+Example:
+
+```bash
+curl http://127.0.0.1:8581/0.1/jaffle_shop/example_endpoint?_limit=100
+```
+
+### `_json_columns`
+
+Parses columns as JSON
+
+Example:
+
+```bash
+curl http://127.0.0.1:8581/0.1/jaffle_shop/example_endpoint?_json_columns=[json_col]
+```
 
 
 :::tip

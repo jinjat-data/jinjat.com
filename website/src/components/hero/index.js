@@ -18,7 +18,7 @@ const dbtProjectSteps = [
     name: "⒉ Write parametrized SQL",
     file: "~/dbtproject/analysis/order_stats.sql",
     lang: "sql",
-    code: `{%- set query_params = request().query %}
+    code: `{%- set query_params = jinjat.request().query %}
 
 select  order_date, 
         count(*) as orders, 
