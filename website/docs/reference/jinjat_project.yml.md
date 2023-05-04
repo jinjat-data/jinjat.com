@@ -11,6 +11,9 @@ Jinjat uses dbt under the hood which requires `dbt_project.yml` file. This file 
 <File name='jinjat_project.yml'>
 
 ```yml
+[cors](#cors):
+  allowed_origins: ["http://127.0.0.1:3000"]
+
 [query](#query):
   max_limit: <50000>
   default_limit: <1000>
@@ -28,6 +31,10 @@ refine:
 ```
 
 </File>
+
+### CORS
+
+Enables [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) to perform calls from different websites.
 
 ### Query
 

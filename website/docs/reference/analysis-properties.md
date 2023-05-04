@@ -20,8 +20,6 @@ version: 2
 analyses:
   - name: <analysis_name> # required
     config:
-      tags:
-        - [cors](#cors)
       jinjat:
         method: get
         [openapi](/reference/openapi#dbt-analysis): <dictionary>
@@ -39,38 +37,6 @@ analyses:
 ```
 
 </File>
-
-## cors
-
-Jinjat will enable CORS for the analyses that have `cors` tag. If you want to enable CORS project level, here is how you can do it:
-
-
-<File name='dbt_project.yml'>
-
-```yml
-name: 'jaffle_shop'
-version: '1.0.0'
-config-version: 2
-
-models:
-  jaffle_shop:
-      +tags: 
-        - "cors"
-```
-
-</File>
-
-Example in analysis:
-
-```yml
-version: 2
-
-analyses:
-  - name: example_endpoint
-    config:
-      tags:
-        - cors
-```
 
 ## fetch
 
