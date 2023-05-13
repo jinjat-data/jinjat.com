@@ -70,23 +70,23 @@ function Home() {
               <div>
                 <Card
                   title="CRUD applications"
-                  body="Generate REST APIs and UIs automatically for dbt sources"
+                  body="Generate web applications to interact with your database, just with SQL"
                   link="/blog/develop-crud-app"
                   icon="pencil-paper"
                 />
               </div>
               <div>
                 <Card
-                  title="Metric store"
-                  body="Create Business Intelligence apps using dbt-metrics with your custom front-end"
+                  title="Cloud-native API Backend"
+                  body="Create API backends from the data in your data warehouse only with SQL, no boilerplate needed"
                   link="/blog/serve-dbt-metrics"
                   icon="book"
                 />
               </div>
               <div>
                 <Card
-                  title="Cloud-native Backend APIs"
-                  body="Use your custom UDF, procedures natively in SQL to interact with your cloud data-warehouse"
+                  title="OpenAI Plugins"
+                  body="Develop OpenAI plugins to make AI talk to your database"
                   link="/blog/develop-cloud-native-app"
                   icon="packages"
                 />
