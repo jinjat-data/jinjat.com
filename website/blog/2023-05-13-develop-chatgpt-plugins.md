@@ -1,5 +1,5 @@
 ---
-title: "Developing ChatGPT Plugins with SQL using Jinjat"
+title: "Developing ChatGPT Plugins with SQL"
 description: "Tutorial to use Jinjat for developing OpenAI Plugins"
 slug: develop-chatgpt-plugins-with-sql-using-jinjat
 
