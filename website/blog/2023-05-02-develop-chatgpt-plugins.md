@@ -99,6 +99,7 @@ You can see all the API endpoints / dbt analyses [on Github](https://github.com/
 
 * [Getting Started](https://jinjat.com/docs/getting-started)
 * [Documenting your API endpoints](https://jinjat.com/reference/analysis-properties)
+* [See the source code for `jaffle_shop`](https://github.com/jinjat-data/jaffle_shop_metrics)
 
 > ChatGPT handles the cases where our API returns too much data as well. Jinjat returns [413 Status code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413) which makes  OpenGPT breakdown the queries into two chunks and [merge them](https://share.cleanshot.com/88HQspGy).
 
