@@ -10,7 +10,7 @@ const dbtProjectSteps = [
     file: "~/dbtproject/packages.yml",
     code: `packages:
   - package: https://github.com/jinjat-data/dbt_jinjat
-    version: 0.1`,
+    version: 0.2-prerelease`,
     docs: "/docs/installation",
     docsText: "Installation Guide ↗",
   },

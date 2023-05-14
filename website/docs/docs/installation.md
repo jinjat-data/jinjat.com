@@ -12,7 +12,7 @@ Create a `package.yml` file in the main directory of your dbt project and add th
 ```yml
 packages:
   - git: https://github.com/jinjat-data/dbt_jinjat
-    version: 0.1
+    version: 0.2-prerelease
 ```
 
 Jinjat dbt package comes with a set of macros that lets you customize the API endpoints so it's optional if you just create endpoints that just execute static SQL queries. The most important macro is `jinjat.request()`, which has information about the current request.
