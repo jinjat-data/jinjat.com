@@ -87,7 +87,7 @@ function Home() {
                 <Card
                   title="OpenAI Plugins"
                   body="Develop OpenAI plugins to make AI talk to your database"
-                  link="/blog/develop-cloud-native-app"
+                  link="/blog/develop-chatgpt-plugins-to-talk-your-database"
                   icon="packages"
                 />
               </div>
