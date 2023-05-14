@@ -6,7 +6,7 @@ slug: develop-chatgpt-plugins-with-sql-using-jinjat
 authors: [buremba]
 tags: [tutorial]
 hide_table_of_contents: true
-image: /img/blog/develop-chatgpt/thumbnail.png
+image: /img/blog/develop-chatgpt/thumbnail2.png
 date: 2023-05-13
 is_featured: true
 ---
