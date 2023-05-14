@@ -79,7 +79,6 @@ function Home() {
                 <Card
                   title="Cloud-native API Backend"
                   body="Create API backends from the data in your data warehouse only with SQL, no boilerplate needed"
-                  link="/blog/serve-dbt-metrics"
                   icon="book"
                 />
               </div>
@@ -87,7 +86,7 @@ function Home() {
                 <Card
                   title="OpenAI Plugins"
                   body="Develop OpenAI plugins to make AI talk to your database"
-                  link="/blog/develop-chatgpt-plugins-to-talk-your-database"
+                  link="/blog/develop-chatgpt-plugins-with-sql-using-jinjat"
                   icon="packages"
                 />
               </div>

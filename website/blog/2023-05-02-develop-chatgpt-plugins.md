@@ -1,7 +1,7 @@
 ---
 title: "Developing ChatGPT Plugins with SQL using Jinjat"
 description: ""
-slug: develop-chatgpt-plugins-to-talk-your-database
+slug: develop-chatgpt-plugins-with-sql-using-jinjat
 
 authors: [buremba]
 
@@ -12,9 +12,9 @@ date: 2023-05-25
 is_featured: true
 ---
 
-ChatGPT plugins let you plug in your custom APIs to enable OpenAI talk to your company data and take actions via triggering API calls. The integration is pretty seamless; you write a manifest file and explain when ChatGPT should call your plugin. The manifest file has a reference to your OpenAPI spec which includes your API endpoints and ChatGPT *automagically* generates an API call and calls your API when you ask questions. 
+ChatGPT plugins let you plug in your custom APIs to enable OpenAI to talk to your company data and take actions via triggering API calls. The integration is pretty seamless; you write a manifest file and explain when ChatGPT should call your plugin. The manifest file has a reference to your OpenAPI spec which includes your API endpoints and ChatGPT *automagically* generates an API call and calls your API when you ask questions. 
 
-The generative AI models usually don't have access to the real-time data, they need to be trained in advance. As of today, ChatGPT's cutoff date is [2021](https://community.openai.com/t/knowledge-cutoff-date-of-september-2021/66215) which means that it doesn't know what happened after 2021. The only way for it to access the real-time and private data is through the ChatGPT Plugins. Jinjat helps you connect your data in your data warehouse to ChatGPT. Here are the steps:
+The generative AI models usually don't have access to real-time data, they need to be trained in advance. As of today, ChatGPT's cutoff date is [2021](https://community.openai.com/t/knowledge-cutoff-date-of-september-2021/66215) which means that it doesn't know what happened after 2021. The only way for it to access the real-time and private data is through the ChatGPT Plugins. Jinjat helps you connect your data in your data warehouse to ChatGPT. Here are the steps:
 
 <!--truncate-->
 
@@ -22,7 +22,7 @@ The generative AI models usually don't have access to the real-time data, they n
 
 ## Setup manifest file
 
-Create the [following file](https://github.com/jinjat-data/jaffle_shop_metrics/blob/main/static/.well-known/ai-plugin.json) and edit the description about your data source. You can see the documentation about the properties [here](https://platform.openai.com/docs/plugins/getting-started/plugin-manifest). Jinjat will serve the files under `/static` directory by default so OpenAPI will hit our API running locally.
+Create the [following file](https://github.com/jinjat-data/jaffle_shop_metrics/blob/main/static/.well-known/ai-plugin.json) and edit the description about of data source. You can see the documentation about the properties [here](https://platform.openai.com/docs/plugins/getting-started/plugin-manifest). Jinjat will serve the files under `/static` directory by default so OpenAPI will hit our API running locally.
 
 <File name='/static/.well-known/ai-plugin.json'>
 
@@ -49,7 +49,7 @@ Create the [following file](https://github.com/jinjat-data/jaffle_shop_metrics/b
 
 </File>
 
-Next, we will enable CORS for OpenAI so that it can access to Jinjat that is running locally. 
+Next, we will enable CORS for OpenAI so that it can access Jinjat which is running locally. 
 
 <File name='jinjat_project.yml'>
 
@@ -63,7 +63,7 @@ cors:
 
 </File>
 
-That's all! Let's register our app in plugin store.
+That's all! Let's register our app in the plugin store.
 
 <center><b> 1. Plugin Store </b></center>
 
@@ -97,7 +97,7 @@ analyses:
     description: Get product expenses for all the company
 ```
 
-You can see all the API endpoints / dbt analyses [on Github](https://github.com/jinjat-data/jaffle_shop_metrics/tree/main/analyses), create new SQL files which will generate an endpoint automatically. Developing an plugin for OpenAI usually requires some prompt engineerig to tune for the queries that you expect because OpenAI can get confused if your API contract is complex, it's usually recommedded to add notes to your yml files. You can find relevant docs below:
+You can see all the API endpoints / dbt analyses [on Github](https://github.com/jinjat-data/jaffle_shop_metrics/tree/main/analyses), create new SQL files which will generate an endpoint automatically. Developing a plugin for OpenAI usually requires some prompt engineering to tune for the queries that you expect because OpenAI can get confused if your API contract is complex, it's usually recommended to add notes to your yml files. You can find relevant docs below:
 
 * [Getting Started](https://jinjat.com/docs/getting-started)
 * [Documenting your API endpoints](https://jinjat.com/reference/analysis-properties)
