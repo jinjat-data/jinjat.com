@@ -1833,3 +1833,9 @@ section > h2:not(.resource-section) {
 .button.button--homepage-steps.active {
     background: rgba(0, 0, 0, 0.5);
 }
+
+#post-content img {
+    max-width: 70%;
+    margin: 0 auto;
+    display:block
+}
