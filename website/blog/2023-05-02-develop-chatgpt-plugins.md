@@ -16,6 +16,8 @@ ChatGPT plugins let you plug in your custom APIs to enable OpenAI talk to your c
 
 The generative AI models usually don't have access to the real-time data, they need to be trained in advance. As of today, ChatGPT's cutoff date is [2021](https://community.openai.com/t/knowledge-cutoff-date-of-september-2021/66215) which means that it doesn't know what happened after 2021. The only way for it to access the real-time and private data is through the ChatGPT Plugins. Jinjat helps you connect your data in your data warehouse to ChatGPT. Here are the steps:
 
+<!--truncate-->
+
 > You can find the source code here of our sample ChatGPT plugin here: https://github.com/jinjat-data/jaffle_shop_metrics
 
 ## Setup manifest file
