@@ -1,13 +1,12 @@
 ---
 title: "Developing ChatGPT Plugins with SQL using Jinjat"
-description: ""
+description: "Tutorial to use Jinjat for developing OpenAI Plugins"
 slug: develop-chatgpt-plugins-with-sql-using-jinjat
 
 authors: [buremba]
-
 tags: [tutorial]
 hide_table_of_contents: true
-
+image: /img/blog/develop-chatgpt/thumbnail.png
 date: 2023-05-13
 is_featured: true
 ---
@@ -67,7 +66,7 @@ That's all! Let's register our app in the plugin store.
 
 <center><b> 1. Plugin Store </b></center>
 
-![Plugin Store](pathname:///img/blog/develop-chatgpt/plugin-store.png)
+![Plugin Store](/img/blog/develop-chatgpt/plugin-store.png)
 
 <center><b> 2. Enter Domain </b></center>
 
