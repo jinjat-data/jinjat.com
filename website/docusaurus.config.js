@@ -157,6 +157,10 @@ var siteSettings = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
+        gtag: {
+          trackingID: 'G-8TTYCGW18D',
+          anonymizeIP: false,
+        },
         docs: {
           path: "docs",
           routeBasePath: "/",
