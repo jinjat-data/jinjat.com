@@ -13,6 +13,4 @@ is_featured: true
 ---
 
 
-Heya!
-
-## Test
+Not much here yet but just wanted to say heya!

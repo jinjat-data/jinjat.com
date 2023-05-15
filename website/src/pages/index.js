@@ -8,9 +8,8 @@ import Hero from '@site/src/components/hero';
 
 function Home() {
   const featuredResource = {
-    title: "Introducing Jinjat: a new way of building data applications",
-    link: "/blog/introducing-jinjat",
-    image: "/img/structure-dbt-projects.png"
+    title: "Developing ChatGPT Plugins with SQL using Jinjat",
+    link: "/blog/develop-chatgpt-plugins-with-sql-using-jinjat",
   }
   return (
     <>
