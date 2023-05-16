@@ -29,7 +29,7 @@ const Rapidoc = () => {
 
     return (
         <rapi-doc
-            spec-url="https://raw.githubusercontent.com/fishtown-analytics/dbt-cloud-openapi-spec/master/openapi-v4.yaml"
+            spec-url="https://jaffle-shop.jinj.at/admin/openapi.json"
             theme={isDarkTheme ? 'dark' : 'light'}
             bg-color={
                 isDarkTheme ? customThemeColors['darkmode-background'] : '#fff'
